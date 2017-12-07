@@ -1,5 +1,8 @@
 FROM alpine:latest
 
+ENV PYTHONIOENCODING UTF-8
+ENV LANG C.UTF-8
+
 RUN mkdir -p /app /config /data
 RUN apk --no-cache add \
     python2 \
