@@ -15,9 +15,11 @@ RUN apk --no-cache add \
 RUN git clone --depth 1 -b docker https://github.com/tkjacobsen/enote /app/enote \
   && rm -rf /app/enote/.git
 
-RUN adduser -D -u 1000 backup
+RUN adduser -D -u 1026 backup
 
 COPY backup.sh /app/backup.sh
 RUN chmod +x /app/backup.sh
+
+RUN chown -R backup /app
 
 CMD ["/app/backup.sh"]
