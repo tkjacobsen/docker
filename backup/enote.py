@@ -69,6 +69,7 @@ def main():
                     do_download = False
              
             if do_download:
+                print("Downloading note: {}/{} -> {}".format(notebook.name, note.title, note_path))
                 media_store = enml.FileMediaStore(note_store, note.guid, os.path.join(notebook_dir, clean_filename(note.title)))
                 content = note_store.getNoteContent(token, note.guid)
                 content = enml.ENMLToText(content, media_store=media_store)
