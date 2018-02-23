@@ -1,5 +1,5 @@
 Build:
-docker build --rm -t XXX/backup .
+docker build --rm -t XXX/mailsync .
 
 Run:
-docker run --user sync --rm --volume XYZ:/config --volume XYZ:/data XYZ
+docker run --user msync --rm --volume XYZ:/config --volume XYZ:/data XXX/mailsync
