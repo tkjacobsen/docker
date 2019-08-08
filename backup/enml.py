@@ -103,7 +103,7 @@ def ENMLToText(content, pretty=True, header=True, **kwargs):
     soup = BeautifulSoup(html, "html.parser")
     todos = soup.find_all("input", type="checkbox")
     for todo in todos:
-        if "checked" in todo and todo["checked"] == "true":
+        if todo.has_attr("checked") and todo["checked"] == "true":
             todo.replace_with("[x]")
         else:
             todo.replace_with("[ ]")
