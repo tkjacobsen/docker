@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
 RUN mkdir -p /app /config /data
 RUN apk --no-cache add \
