@@ -1,6 +1,6 @@
 FROM alpine:3.11
 
-ENV VERSION=1.3.3
+ENV VERSION=1.4.2
 
 RUN apk --no-cache add curl
 
