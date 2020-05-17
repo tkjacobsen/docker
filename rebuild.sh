@@ -16,4 +16,4 @@ done
 
 sudo docker stop syncthing
 sudo docker rm syncthing
-sudo docker run --name=syncthing --restart=always --user=syncthing -d --net=host -v /var/services/homes/taj_admin/config/syncthing:/config -v /volume1/Sync:/data/Sync taj/syncthing
+sudo docker run --name=syncthing --restart=always --user=syncthing -d --net=host -v /var/services/homes/taj_admin/config/syncthing:/config -v /volume1/Sync:/data taj/syncthing
